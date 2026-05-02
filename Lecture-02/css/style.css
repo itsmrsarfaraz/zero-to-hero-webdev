@@ -1,3 +1,6 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
 /* 1. Base Setup */
 *,
 *::before,
@@ -16,18 +19,19 @@
     --bg-light: #f8fafc;
     --white: #ffffff;
     --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    --transition: all 0.3s ease;
+    --transition-transform: transform 0.3s ease;
+    --transition-color: color 0.3s ease, background-color 0.3s ease;
+    --transition-shadow: box-shadow 0.3s ease;
 }
 
-/* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
 html {
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
     line-height: 1.6;
     color: var(--text-main);
     background-color: var(--bg-light);
@@ -75,6 +79,8 @@ nav {
 nav ul {
     display: flex;
     /* Flexbox Component 2 */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     list-style: none;
     gap: 2rem;
@@ -85,6 +91,7 @@ nav a {
     color: var(--secondary-color);
     font-weight: 600;
     font-size: 0.9rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     transition: var(--transition);
 }
@@ -100,12 +107,23 @@ main {
     padding: 2rem;
 }
 
+main ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+main ul li::before {
+    content: "▸ ";
+    color: var(--primary-color);
+}
+
 section {
     margin-bottom: 4rem;
 }
 
 h2 {
     font-size: 2rem;
+    line-height: 1.2;
     margin-bottom: 1.5rem;
     border-left: 5px solid var(--primary-color);
     padding-left: 1rem;
@@ -159,6 +177,10 @@ td {
 th {
     background-color: var(--primary-color);
     color: var(--white);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
 }
 
 /* 7. Contact Form */
@@ -223,15 +245,14 @@ footer a {
 }
 
 /* 9. Responsive Design (768px Breakpoint) */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     header {
         flex-direction: column;
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        flex-direction: row;
+        gap: 2rem;
     }
 
     main {
