@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Profile | Your Name</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body class="bg-[--color-bg-light] dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-[--font-inter]">
+
+    <!-- Sticky Nav with Flexbox -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between p-4 gap-4">
+            <h1 class="text-xl font-bold text-[--color-primary] uppercase tracking-tighter">DevPortfolio</h1>
+            <ul class="flex gap-6 text-sm font-semibold uppercase tracking-widest">
+                <li><a href="#about" class="hover:text-[--color-primary] transition-colors">About</a></li>
+                <li><a href="#projects" class="hover:text-[--color-primary] transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:text-[--color-primary] transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section (h-dvh & Gradient) -->
+    <header
+        class="h-dvh flex flex-col items-center justify-center text-center px-4 bg-gradient-to-b from-[--color-secondary] to-slate-900 text-white">
+        <div class="animate-[--animate-fade-in] space-y-6">
+            <div class="relative inline-block">
+                <img src="images/portfolio-img.png" alt="Profile"
+                    class="w-40 h-40 rounded-full border-4 border-[--color-accent] mx-auto transition-transform hover:scale-110">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold">Your Name</h1>
+            <p class="text-xl text-slate-300 max-w-2xl">Full-Stack Developer | Problem Solver | Tech Enthusiast</p>
+            <a href="#projects" class="btn-primary">Explore My Work</a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-20 px-6">
+
+        <!-- About Section (Flexbox & Dark Mode elements) -->
+        <section id="about" class="mb-24 flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 border-l-4 border-[--color-primary] pl-4 dark:text-white">About Me
+                </h2>
+                <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                    I am a dedicated developer with a focus on building clean, scalable, and user-centric applications.
+                    With a background in Software Engineering, I thrive in collaborative environments solving complex
+                    technical challenges.
+                </p>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <div class="p-4 bg-white dark:bg-slate-800 rounded-lg shadow-sm border dark:border-slate-700">
+                    <span class="text-[--color-primary] font-bold block text-2xl">10+</span>
+                    <span class="text-sm uppercase font-semibold">Years Exp</span>
+                </div>
+                <div class="p-4 bg-white dark:bg-slate-800 rounded-lg shadow-sm border dark:border-slate-700">
+                    <span class="text-[--color-primary] font-bold block text-2xl">50+</span>
+                    <span class="text-sm uppercase font-semibold">Projects</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Responsive Grid & Group Hover) -->
+        <section id="projects" class="mb-24">
+            <h2 class="text-3xl font-bold mb-10 dark:text-white">Recent Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1 -->
+                <article class="card group">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold group-hover:text-[--color-primary] transition-colors">E-Commerce
+                            Dashboard</h3>
+                        <span class="badge">React</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">
+                        A real-time analytics dashboard for online retailers. Integrated with Stripe API for payment
+                        tracking and JWT auth.
+                    </p>
+                    <button
+                        class="text-[--color-primary] font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                        View Case Study <span>&rarr;</span>
+                    </button>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="card group">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold group-hover:text-[--color-primary] transition-colors">Task Manager
+                        </h3>
+                        <span class="badge">Python</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">
+                        A productivity tool for remote teams to track sprints featuring WebSockets for real-time
+                        notifications.
+                    </p>
+                    <button
+                        class="text-[--color-primary] font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                        View Case Study <span>&rarr;</span>
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contact Form (State Modifiers) -->
+        <section id="contact" class="max-w-2xl mx-auto">
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border dark:border-slate-700">
+                <h2 class="text-3xl font-bold mb-6 dark:text-white text-center">Let's Connect</h2>
+                <form action="#" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold mb-2 uppercase tracking-wide">Name</label>
+                        <input type="text" class="form-input" required placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2 uppercase tracking-wide">Email</label>
+                        <input type="email" class="form-input" required placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2 uppercase tracking-wide">Message</label>
+                        <textarea rows="4" class="form-input" required
+                            placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[--color-secondary] text-white py-12 text-center">
+        <p class="opacity-70">&copy; 2026 Your Name. All rights reserved.</p>
+        <div class="mt-4 flex justify-center gap-6">
+            <a href="#" class="hover:text-[--color-accent]">GitHub</a>
+            <a href="#" class="hover:text-[--color-accent]">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

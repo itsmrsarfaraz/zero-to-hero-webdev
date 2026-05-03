@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+    /* Porting your previous :root variables */
+    --color-primary: #2563eb;
+    --color-secondary: #1e293b;
+    --color-accent: #3b82f6;
+    --color-bg-light: #f8fafc;
+
+    /* Task 3 Requirements: Customizing the theme */
+    --font-inter: "Inter", sans-serif;
+    --animate-fade-in: fade-in 0.8s ease-out forwards;
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@layer components {
+
+    /* Task 3 Requirements: Reusable Components */
+    .btn-primary {
+        @apply inline-block bg-[--color-primary] text-white px-8 py-3 rounded-md font-semibold transition-all duration-300 hover:bg-[--color-secondary] active:scale-95 cursor-pointer;
+    }
+
+    .card {
+        @apply bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+    }
+
+    .form-input {
+        @apply w-full p-3 border border-slate-300 rounded-md bg-transparent outline-none transition-all focus:ring-2 focus:ring-[--color-accent] focus:border-transparent invalid:border-red-500 invalid:text-red-600 valid:border-green-500;
+    }
+
+    .badge {
+        @apply inline-block px-3 py-1 text-xs font-bold rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 uppercase tracking-wider;
+    }
+}
