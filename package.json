@@ -1,0 +1,25 @@
+{
+  "name": "zero-to-hero-webdev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsmrsarfaraz/zero-to-hero-webdev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/itsmrsarfaraz/zero-to-hero-webdev/issues"
+  },
+  "homepage": "https://github.com/itsmrsarfaraz/zero-to-hero-webdev#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  }
+}
